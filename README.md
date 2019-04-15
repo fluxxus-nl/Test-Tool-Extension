@@ -6,5 +6,4 @@ The Test Tool extension extends the standard test tool in Microsoft Dynamics 365
     -	all tests
     -	only failing tests and thus disabling all others
     -	none failing tests, thus disabling failing tests
-- Deselect the Run  all tests, this disabling all tests
-
+- Deselect the Run field for all tests, thus disabling all tests
