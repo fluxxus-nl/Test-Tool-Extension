@@ -20,6 +20,6 @@
     "from": 92000,
     "to": 92099
   },
-  "runtime": "2.4",
+  "runtime": "3.0",
   "showMyCode": true
 }

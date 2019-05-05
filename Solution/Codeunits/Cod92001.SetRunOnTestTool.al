@@ -1,4 +1,4 @@
-codeunit 92001 "SetRunOnTestToolFLX"
+codeunit 92001 "Set Run On Test Tool FLX"
 {
     procedure SetRun(var CALTestLine: Record "CAL Test Line"; RunType: Option All,"None",Failures,NonFailures)
     var

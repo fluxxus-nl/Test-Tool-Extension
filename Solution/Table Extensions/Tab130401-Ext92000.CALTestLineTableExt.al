@@ -1,4 +1,4 @@
-tableextension 92000 "CALTestLineTableExt" extends "CAL Test Line" //130401
+tableextension 92000 "CAL Test Line Table Ext" extends "CAL Test Line" //130401
 {
     procedure InitRecord(NewSuiteName: Code[10]; NewLineNo: Integer; NewLineType: Option "Group","Codeunit","Function"; NewCodeunitID: Integer; NewActive: Boolean)
     begin

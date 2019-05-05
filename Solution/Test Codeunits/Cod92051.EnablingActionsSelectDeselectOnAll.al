@@ -343,7 +343,7 @@ codeunit 92051 "Enabl. Actns Select On All FLX"
     local procedure SetRun(CodeunitID: Integer; RunType: Option All,"Non",Failures,NonFailures)
     var
         CALTestLine: Record "CAL Test Line";
-        SetRunOnTestTool: Codeunit "SetRunOnTestToolFLX";
+        SetRunOnTestTool: Codeunit "Set Run On Test Tool FLX";
     begin
         SetFilterOnCALTestLine(CALTestLine, CodeunitID);
         SetRunOnTestTool.SetRun(CALTestLine, RunType)

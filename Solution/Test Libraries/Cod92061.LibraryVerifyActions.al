@@ -6,8 +6,8 @@ codeunit 92061 "Library - Verify Actions FLX"
     procedure VerifySelectOnAllIsDisabled(TestSuiteName: Code[10]; CodeunitID: Integer)
     var
         CALTestLine: Record "CAL Test Line";
-        ActionEnablingArguments: Record "ActionEnablingArguments FLX";
-        SetActionsEnablingOnTestTool: Codeunit "SetActionsEnablOnTestToolFLX";
+        ActionEnablingArguments: Record "Action Enabling Arguments FLX";
+        SetActionsEnablingOnTestTool: Codeunit "Set Actions Enabling On TT FLX";
     begin
         SetFilterOnCALTestLine(CALTestLine, TestSuiteName, CodeunitID);
         SetActionsEnablingOnTestTool.SetActionsEnabling(CALTestLine, ActionEnablingArguments);
@@ -17,8 +17,8 @@ codeunit 92061 "Library - Verify Actions FLX"
     procedure VerifySelectOnAllIsEnabled(TestSuiteName: Code[10]; CodeunitID: Integer)
     var
         CALTestLine: Record "CAL Test Line";
-        ActionEnablingArguments: Record "ActionEnablingArguments FLX";
-        SetActionsEnablingOnTestTool: Codeunit "SetActionsEnablOnTestToolFLX";
+        ActionEnablingArguments: Record "Action Enabling Arguments FLX";
+        SetActionsEnablingOnTestTool: Codeunit "Set Actions Enabling On TT FLX";
     begin
         SetFilterOnCALTestLine(CALTestLine, TestSuiteName, CodeunitID);
         SetActionsEnablingOnTestTool.SetActionsEnabling(CALTestLine, ActionEnablingArguments);
@@ -28,8 +28,8 @@ codeunit 92061 "Library - Verify Actions FLX"
     procedure VerifyDeselectOnAllIsDisabled(TestSuiteName: Code[10]; CodeunitID: Integer)
     var
         CALTestLine: Record "CAL Test Line";
-        ActionEnablingArguments: Record "ActionEnablingArguments FLX";
-        SetActionsEnablingOnTestTool: Codeunit "SetActionsEnablOnTestToolFLX";
+        ActionEnablingArguments: Record "Action Enabling Arguments FLX";
+        SetActionsEnablingOnTestTool: Codeunit "Set Actions Enabling On TT FLX";
     begin
         SetFilterOnCALTestLine(CALTestLine, TestSuiteName, CodeunitID);
         SetActionsEnablingOnTestTool.SetActionsEnabling(CALTestLine, ActionEnablingArguments);
@@ -39,8 +39,8 @@ codeunit 92061 "Library - Verify Actions FLX"
     procedure VerifyDeselectOnAllIsEnabled(TestSuiteName: Code[10]; CodeunitID: Integer)
     var
         CALTestLine: Record "CAL Test Line";
-        ActionEnablingArguments: Record "ActionEnablingArguments FLX";
-        SetActionsEnablingOnTestTool: Codeunit "SetActionsEnablOnTestToolFLX";
+        ActionEnablingArguments: Record "Action Enabling Arguments FLX";
+        SetActionsEnablingOnTestTool: Codeunit "Set Actions Enabling On TT FLX";
     begin
         SetFilterOnCALTestLine(CALTestLine, TestSuiteName, CodeunitID);
         SetActionsEnablingOnTestTool.SetActionsEnabling(CALTestLine, ActionEnablingArguments);
@@ -50,8 +50,8 @@ codeunit 92061 "Library - Verify Actions FLX"
     procedure VerifySelectOnFailuresIsDisabled(TestSuiteName: Code[10]; CodeunitID: Integer)
     var
         CALTestLine: Record "CAL Test Line";
-        ActionEnablingArguments: Record "ActionEnablingArguments FLX";
-        SetActionsEnablingOnTestTool: Codeunit "SetActionsEnablOnTestToolFLX";
+        ActionEnablingArguments: Record "Action Enabling Arguments FLX";
+        SetActionsEnablingOnTestTool: Codeunit "Set Actions Enabling On TT FLX";
     begin
         SetFilterOnCALTestLine(CALTestLine, TestSuiteName, CodeunitID);
         SetActionsEnablingOnTestTool.SetActionsEnabling(CALTestLine, ActionEnablingArguments);
@@ -61,8 +61,8 @@ codeunit 92061 "Library - Verify Actions FLX"
     procedure VerifySelectOnFailuresIsEnabled(TestSuiteName: Code[10]; CodeunitID: Integer)
     var
         CALTestLine: Record "CAL Test Line";
-        ActionEnablingArguments: Record "ActionEnablingArguments FLX";
-        SetActionsEnablingOnTestTool: Codeunit "SetActionsEnablOnTestToolFLX";
+        ActionEnablingArguments: Record "Action Enabling Arguments FLX";
+        SetActionsEnablingOnTestTool: Codeunit "Set Actions Enabling On TT FLX";
     begin
         SetFilterOnCALTestLine(CALTestLine, TestSuiteName, CodeunitID);
         SetActionsEnablingOnTestTool.SetActionsEnabling(CALTestLine, ActionEnablingArguments);
@@ -72,8 +72,8 @@ codeunit 92061 "Library - Verify Actions FLX"
     procedure VerifySelectOnNonFailuresIsDisabled(TestSuiteName: Code[10]; CodeunitID: Integer)
     var
         CALTestLine: Record "CAL Test Line";
-        ActionEnablingArguments: Record "ActionEnablingArguments FLX";
-        SetActionsEnablingOnTestTool: Codeunit "SetActionsEnablOnTestToolFLX";
+        ActionEnablingArguments: Record "Action Enabling Arguments FLX";
+        SetActionsEnablingOnTestTool: Codeunit "Set Actions Enabling On TT FLX";
     begin
         SetFilterOnCALTestLine(CALTestLine, TestSuiteName, CodeunitID);
         SetActionsEnablingOnTestTool.SetActionsEnabling(CALTestLine, ActionEnablingArguments);
@@ -83,8 +83,8 @@ codeunit 92061 "Library - Verify Actions FLX"
     procedure VerifySelectOnNonFailuresIsEnabled(TestSuiteName: Code[10]; CodeunitID: Integer)
     var
         CALTestLine: Record "CAL Test Line";
-        ActionEnablingArguments: Record "ActionEnablingArguments FLX";
-        SetActionsEnablingOnTestTool: Codeunit "SetActionsEnablOnTestToolFLX";
+        ActionEnablingArguments: Record "Action Enabling Arguments FLX";
+        SetActionsEnablingOnTestTool: Codeunit "Set Actions Enabling On TT FLX";
     begin
         SetFilterOnCALTestLine(CALTestLine, TestSuiteName, CodeunitID);
         SetActionsEnablingOnTestTool.SetActionsEnabling(CALTestLine, ActionEnablingArguments);

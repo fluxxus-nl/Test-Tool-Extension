@@ -1,6 +1,6 @@
-codeunit 92000 "SetActionsEnablOnTestToolFLX"
+codeunit 92000 "Set Actions Enabling on TT FLX"
 {
-    procedure SetActionsEnabling(var CALTestLine: Record "CAL Test Line"; var ActionEnablingArguments: Record "ActionEnablingArguments FLX")
+    procedure SetActionsEnabling(var CALTestLine: Record "CAL Test Line"; var ActionEnablingArguments: Record "Action Enabling Arguments FLX")
     var
         CALTestLine2: Record "CAL Test Line";
     begin

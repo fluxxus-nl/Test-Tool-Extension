@@ -1,4 +1,4 @@
-table 92000 "ActionEnablingArguments FLX"
+table 92000 "Action Enabling Arguments FLX"
 {
     fields
     {

@@ -1,4 +1,4 @@
-pageextension 92000 "CALTestToolPageExt" extends "CAL Test Tool" //130401
+pageextension 92000 "CAL Test Tool Page Ext" extends "CAL Test Tool" //130401
 {
     layout
     {
@@ -122,7 +122,7 @@ pageextension 92000 "CALTestToolPageExt" extends "CAL Test Tool" //130401
 
     local procedure SetRunOnTests(RunType: Option All,"Non",Failures,NonFailures)
     var
-        SetRunOnTestTool: Codeunit SetRunOnTestToolFLX;
+        SetRunOnTestTool: Codeunit "Set Run On Test Tool FLX";
     begin
         SetRunOnTestTool.SetRun(Rec, RunType);
         SetActionsEnabling();
@@ -130,8 +130,8 @@ pageextension 92000 "CALTestToolPageExt" extends "CAL Test Tool" //130401
 
     local procedure SetActionsEnabling()
     var
-        ActionEnablingArguments: Record ActionEnablingArguments FLX;
-        SetActionsEnablingForTestTool: Codeunit SetActionsEnablOnTestToolFLX;
+        ActionEnablingArguments: Record "Action Enabling Arguments FLX";
+        SetActionsEnablingForTestTool: Codeunit "Set Actions Enabling On TT FLX";
     begin
         SetActionsEnablingForTestTool.SetActionsEnabling(Rec, ActionEnablingArguments);
 

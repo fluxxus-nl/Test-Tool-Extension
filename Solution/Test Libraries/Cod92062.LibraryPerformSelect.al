@@ -23,7 +23,7 @@ codeunit 92062 "Library - Perform Select FLX"
     local procedure SetRun(TestSuiteName: Code[10]; CodeunitID: Integer; RunType: Option All,"Non",Failures,NonFailures)
     var
         CALTestLine: Record "CAL Test Line";
-        SetRunOnTestTool: Codeunit "SetRunOnTestToolFLX";
+        SetRunOnTestTool: Codeunit "Set Run On Test Tool FLX";
     begin
         CALTestLine."Test Suite" := TestSuiteName;
         if CodeunitID <> 0 then
