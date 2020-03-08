@@ -1,5 +1,7 @@
 table 92000 "Action Enabling Arguments FLX"
 {
+    // (c) fluxxus.nl - https://github.com/fluxxus-nl/Test-Tool-Extension
+
     fields
     {
         field(1; SelectAllEnabled; Boolean) { }

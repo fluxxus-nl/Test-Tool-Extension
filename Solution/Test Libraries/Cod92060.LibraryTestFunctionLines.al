@@ -1,5 +1,7 @@
 codeunit 92060 "Lib. - Test Function Lns FLX"
 {
+    // (c) fluxxus.nl - https://github.com/fluxxus-nl/Test-Tool-Extension
+
     var
         BaseCodeunitID: Integer;
         CurrentCodeunitID: Integer;

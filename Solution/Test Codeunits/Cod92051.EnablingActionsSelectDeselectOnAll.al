@@ -1,5 +1,7 @@
 codeunit 92051 "Enabl. Actns Select On All FLX"
 {
+    // (c) fluxxus.nl - https://github.com/fluxxus-nl/Test-Tool-Extension
+
     // [FEATURE] Enabling Actions Select/Deselect on All Unfiltered
     // [FEATURE] Enabling Actions Select/Deselect on All Filtered
     SubType = Test;

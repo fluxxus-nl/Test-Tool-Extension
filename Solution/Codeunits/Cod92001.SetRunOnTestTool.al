@@ -1,5 +1,7 @@
 codeunit 92001 "Set Run On Test Tool FLX"
 {
+    // (c) fluxxus.nl - https://github.com/fluxxus-nl/Test-Tool-Extension
+
     procedure SetRun(var CALTestLine: Record "CAL Test Line"; RunType: Option All,"None",Failures,NonFailures)
     var
         CALTestLine2: Record "CAL Test Line";

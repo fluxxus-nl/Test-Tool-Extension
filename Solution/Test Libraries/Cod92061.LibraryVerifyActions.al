@@ -1,5 +1,7 @@
 codeunit 92061 "Library - Verify Actions FLX"
 {
+    // (c) fluxxus.nl - https://github.com/fluxxus-nl/Test-Tool-Extension
+
     var
         Assert: Codeunit Assert;
 

@@ -1,5 +1,7 @@
 pageextension 92000 "CAL Test Tool Page Ext" extends "CAL Test Tool" //130401
 {
+    // (c) fluxxus.nl - https://github.com/fluxxus-nl/Test-Tool-Extension
+
     layout
     {
         modify(Run)

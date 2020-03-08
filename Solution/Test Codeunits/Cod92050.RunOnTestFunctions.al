@@ -1,5 +1,7 @@
 codeunit 92050 "Run on Test Functions FLX"
 {
+    // (c) fluxxus.nl - https://github.com/fluxxus-nl/Test-Tool-Extension
+
     // [FEATURE] Run on Unfiltered Test Functions
     // [FEATURE] Run on Filtered Test Functions
     SubType = Test;

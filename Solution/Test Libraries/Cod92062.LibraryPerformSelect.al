@@ -1,5 +1,7 @@
 codeunit 92062 "Library - Perform Select FLX"
 {
+    // (c) fluxxus.nl - https://github.com/fluxxus-nl/Test-Tool-Extension
+
     procedure PerformSelectOnAll(TestSuiteName: Code[10]; CodeunitID: Integer)
     begin
         SetRun(TestSuiteName, CodeunitID, 0) // 0 = All
