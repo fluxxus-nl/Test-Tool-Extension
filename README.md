@@ -16,3 +16,7 @@ The CAL Test Tool Extension extends the _CAL Test Tool_ in Microsoft Dynamics 36
 You might have come here via my new book [Automated Testing in Microsoft Dynamics 365 Business Central](https://www.packtpub.com/business/automated-testing-microsoft-dynamics-365-business-central), published by, Packt. Feel free to use the extension and source to your own need. Would be fantastic if any adjustments you think are useful are shared be reporting it ad an issue here.
 
 You also might want to read me [blog post](https://dynamicsuser.net/nav/b/vanvugt/posts/test-tool-extension) on the subject.
+
+# AL Test Tool Extension
+
+With BC16 MS has released a new test tool called _AL Test Tool_, which no longer is part of the application, but resides in it's own extension. The Al Test Tool Extension extends this in the same matter as the CAL Test Tool Extension extends the _CAL Test Tool_.
