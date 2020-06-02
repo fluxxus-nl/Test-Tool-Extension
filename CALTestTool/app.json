@@ -1,25 +1,43 @@
 {
   "id": "ac560b36-9043-4868-af24-b819d6885cf4",
-  "name": "TestTool Extension",
+  "name": "CAL TestTool Extension",
   "publisher": "fluxxus.nl",
-  "brief": "TestTool extension for book Automated Testing in Microsoft Dynamics 365 Business Central",
-  "description": "TestTool extension extends the standard Test Tool with a number of useful features",
+  "brief": "CAL TestTool extension for book Automated Testing in Microsoft Dynamics 365 Business Central",
+  "description": "CAL TestTool extension extends the standard CL Test Tool with a number of useful features",
   "version": "1.0.0.0",
   "privacyStatement": "",
   "EULA": "",
   "help": "https://github.com/fluxxus-nl/Test-Tool-Extension",
   "url": "https://github.com/fluxxus-nl/Test-Tool-Extension",
   "logo": "Images/logo.png",
-  "capabilities": [],
-  "dependencies": [],
+  "platform": "15.0.0.0",
+  "dependencies": [
+    {
+      "id": "63ca2fa4-4f03-4f2b-a480-172fef340d3f",
+      "publisher": "Microsoft",
+      "name": "System Application",
+      "version": "15.0.0.0"
+    },
+    {
+      "id": "437dbf0e-84ff-417a-965d-ed2bb9650972",
+      "publisher": "Microsoft",
+      "name": "Base Application",
+      "version": "15.0.0.0"
+    },
+    {    
+      "id":  "5d86850b-0d76-4eca-bd7b-951ad998e997",
+      "name":  "Tests-TestLibraries",
+      "publisher":  "Microsoft",
+      "version":  "15.0.0.0"
+    }
+  ],
   "screenshots": [],
-  "platform": "14.0.0.0",
-  "application": "14.0.0.0",
-  "test": "14.0.0.0",
-  "idRange": {
-    "from": 92000,
-    "to": 92099
-  },
-  "runtime": "3.0",
-  "showMyCode": true
+  "idRanges": [
+    {
+      "from": 92000,
+      "to": 92099
+    }
+  ],
+  "showMyCode": true,
+  "runtime": "5.0"
 }

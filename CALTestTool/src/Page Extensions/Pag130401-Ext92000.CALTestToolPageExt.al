@@ -4,7 +4,7 @@ pageextension 92000 "CAL Test Tool Page Ext" extends "CAL Test Tool" //130401
 
     layout
     {
-        modify(Run)
+        modify(RunColumn)
         {
             trigger OnAfterValidate()
             begin
