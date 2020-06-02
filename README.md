@@ -1,6 +1,6 @@
-# Test Tool Extension
+# CAL Test Tool Extension
 
-The Test Tool extension extends the standard test tool in Microsoft Dynamics 365 Business Central with the following features.
+The CAL Test Tool Extension extends the _CAL Test Tool_ in Microsoft Dynamics 365 Business Central with the following features.
 
 - Select the Run field for:
     -	all tests
