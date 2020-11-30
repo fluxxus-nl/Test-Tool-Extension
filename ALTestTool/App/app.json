@@ -2,39 +2,22 @@
   "id": "2b7d8424-6abd-4580-87cb-1cdedd461f11",
   "name": "AL TestTool Extension",
   "publisher": "fluxxus.nl",
+  "version": "1.0.0.0",
   "brief": "AL TestTool extension for book Automated Testing in Microsoft Dynamics 365 Business Central",
   "description": "AL TestTool extension extends the standard AL Test Tool with a number of useful features",
-  "version": "1.0.0.0",
   "privacyStatement": "",
   "EULA": "",
   "help": "https://github.com/fluxxus-nl/Test-Tool-Extension",
-  "url": "https://github.com/fluxxus-nl/Test-Tool-Extension",
-  "logo": "Images/logo.png",
-  "platform": "15.0.0.0",
+  "url": "http://www.fluxxus.nl",
+  "logo": "images/logo.png",
+  "platform": "16.0.0.0",
+  "application": "16.0.0.0",
   "dependencies": [
     {
-      "id": "63ca2fa4-4f03-4f2b-a480-172fef340d3f",
-      "publisher": "Microsoft",
-      "name": "System Application",
-      "version": "15.0.0.0"
-    },
-    {
-      "id": "437dbf0e-84ff-417a-965d-ed2bb9650972",
-      "publisher": "Microsoft",
-      "name": "Base Application",
-      "version": "15.0.0.0"
-    },
-    {    
       "id":  "23de40a6-dfe8-4f80-80db-d70f83ce8caf",
       "name":  "Test Runner",
       "publisher":  "Microsoft",
-      "version":  "15.0.0.0"
-    },
-    {
-      "id":  "5d86850b-0d76-4eca-bd7b-951ad998e997",
-      "name":  "Tests-TestLibraries",
-      "publisher":  "Microsoft",
-      "version":  "15.0.0.0"
+      "version":  "16.0.0.0"
     }
   ],
   "screenshots": [],

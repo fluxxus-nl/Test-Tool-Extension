@@ -52,11 +52,11 @@ pageextension 92100 "AL Test Tool ALTT FLX" extends "AL Test Tool" //130451
 
         addafter(SelectTestRunner)
         {
-            group(Select)
+            group(SelectFLX)
             {
                 Caption = '&Select Run';
 
-                action(SelectAll)
+                action(SelectAllFLX)
                 {
                     Caption = 'Select on All';
                     ToolTip = 'Select Run on all tests.';
@@ -69,7 +69,7 @@ pageextension 92100 "AL Test Tool ALTT FLX" extends "AL Test Tool" //130451
                         SetRunOnTests(0) // 0 = All
                     end;
                 }
-                action(DeselectAll)
+                action(DeselectAllFLX)
                 {
                     Caption = 'Deselect on All';
                     ToolTip = 'Deselect Run on all tests.';
@@ -82,7 +82,7 @@ pageextension 92100 "AL Test Tool ALTT FLX" extends "AL Test Tool" //130451
                         SetRunOnTests(1) // 1 = None
                     end;
                 }
-                action(SelectFailures)
+                action(SelectFailuresFLX)
                 {
                     Caption = 'Select on Failures';
                     ToolTip = 'Select Run on all failing tests and deselect on all others.';
@@ -95,7 +95,7 @@ pageextension 92100 "AL Test Tool ALTT FLX" extends "AL Test Tool" //130451
                         SetRunOnTests(2) // 2 = Failures
                     end;
                 }
-                action(SelectNonFailures)
+                action(SelectNonFailuresFLX)
                 {
                     Caption = 'Select on Non Failures';
                     ToolTip = 'Deselect Run on all failing tests and select on all others.';

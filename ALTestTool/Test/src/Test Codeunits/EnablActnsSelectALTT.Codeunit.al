@@ -267,11 +267,9 @@ codeunit 92151 "Enabl. Actns. Select ALTT FLX"
 
     local procedure CreateOneDisabledTestCodeunitWithFiveDisabledSuccessfulTestFunctions(): Integer
     begin
-        with LibraryTestFunctions do begin
-            CreateTestCodeunit(TestSuiteName, GetNextCodeunitID(), IsDisabled());
-            CreateTestFunctions(TestSuiteName, GetCurrentCodeunitID(), IsDisabled(), 5, 0);
-            exit(GetCurrentCodeunitID());
-        end;
+        LibraryTestFunctions.CreateTestCodeunit(TestSuiteName, LibraryTestFunctions.GetNextCodeunitID(), IsDisabled());
+        LibraryTestFunctions.CreateTestFunctions(TestSuiteName, LibraryTestFunctions.GetCurrentCodeunitID(), IsDisabled(), 5, 0);
+        exit(LibraryTestFunctions.GetCurrentCodeunitID());
     end;
 
     local procedure CreateOneDisabledTestCodeunitWithFiveDisabledTestFunctions(): Integer
@@ -281,11 +279,9 @@ codeunit 92151 "Enabl. Actns. Select ALTT FLX"
 
     local procedure CreateOneDisabledTestCodeunitWithThreeDisabledSuccessfulTestFunctions(): Integer
     begin
-        with LibraryTestFunctions do begin
-            CreateTestCodeunit(TestSuiteName, GetNextCodeunitID(), IsDisabled());
-            CreateTestFunctions(TestSuiteName, GetCurrentCodeunitID(), IsDisabled(), 3, 0);
-            exit(GetCurrentCodeunitID());
-        end;
+        LibraryTestFunctions.CreateTestCodeunit(TestSuiteName, LibraryTestFunctions.GetNextCodeunitID(), IsDisabled());
+        LibraryTestFunctions.CreateTestFunctions(TestSuiteName, LibraryTestFunctions.GetCurrentCodeunitID(), IsDisabled(), 3, 0);
+        exit(LibraryTestFunctions.GetCurrentCodeunitID());
     end;
 
     local procedure CreateOneDisabledTestCodeunitWithThreeDisabledTestFunctions(): Integer
@@ -295,11 +291,9 @@ codeunit 92151 "Enabl. Actns. Select ALTT FLX"
 
     local procedure CreateOneEnabledTestCodeunitWithFiveEnabledSuccessfulTestFunctions(): Integer
     begin
-        with LibraryTestFunctions do begin
-            CreateTestCodeunit(TestSuiteName, GetNextCodeunitID(), IsDisabled());
-            CreateTestFunctions(TestSuiteName, GetCurrentCodeunitID(), IsEnabled(), 5, 0);
-            exit(GetCurrentCodeunitID());
-        end;
+        LibraryTestFunctions.CreateTestCodeunit(TestSuiteName, LibraryTestFunctions.GetNextCodeunitID(), IsDisabled());
+        LibraryTestFunctions.CreateTestFunctions(TestSuiteName, LibraryTestFunctions.GetCurrentCodeunitID(), IsEnabled(), 5, 0);
+        exit(LibraryTestFunctions.GetCurrentCodeunitID());
     end;
 
     local procedure CreateOneEnabledTestCodeunitWithFiveEnabledTestFunctions(): Integer
@@ -309,11 +303,9 @@ codeunit 92151 "Enabl. Actns. Select ALTT FLX"
 
     local procedure CreateOneEnabledTestCodeunitWithThreeEnabledSuccessfulTestFunctions(): Integer
     begin
-        with LibraryTestFunctions do begin
-            CreateTestCodeunit(TestSuiteName, GetNextCodeunitID(), IsDisabled());
-            CreateTestFunctions(TestSuiteName, GetCurrentCodeunitID(), IsEnabled(), 3, 0);
-            exit(GetCurrentCodeunitID());
-        end;
+        LibraryTestFunctions.CreateTestCodeunit(TestSuiteName, LibraryTestFunctions.GetNextCodeunitID(), IsDisabled());
+        LibraryTestFunctions.CreateTestFunctions(TestSuiteName, LibraryTestFunctions.GetCurrentCodeunitID(), IsEnabled(), 3, 0);
+        exit(LibraryTestFunctions.GetCurrentCodeunitID());
     end;
 
     local procedure CreateOneEnabledTestCodeunitWithThreeEnabledTestFunctions(): Integer
@@ -421,13 +413,11 @@ codeunit 92151 "Enabl. Actns. Select ALTT FLX"
         NoOfAllLinesInTestSuite: Integer;
         NoOfEnabledLinesInTestSuite: Integer;
     begin
-        with TestMethodLine do begin
-            SetFilterOnTestMethodLine(TestMethodLine, CodeunitID);
-            NoOfAllLinesInTestSuite := Count();
-            SetRange(Run, Enabled);
-            NoOfEnabledLinesInTestSuite := Count();
-            Assert.AreEqual(NoOfAllLinesInTestSuite, NoOfEnabledLinesInTestSuite, 'NoOfAllLines <> NoOfEnabledLines');
-        end;
+        SetFilterOnTestMethodLine(TestMethodLine, CodeunitID);
+        NoOfAllLinesInTestSuite := TestMethodLine.Count();
+        TestMethodLine.SetRange(Run, Enabled);
+        NoOfEnabledLinesInTestSuite := TestMethodLine.Count();
+        Assert.AreEqual(NoOfAllLinesInTestSuite, NoOfEnabledLinesInTestSuite, 'NoOfAllLines <> NoOfEnabledLines');
     end;
 
     local procedure SetFilterOnTestMethodLine(var TestMethodLine: Record "Test Method Line"; CodeunitID: Integer)

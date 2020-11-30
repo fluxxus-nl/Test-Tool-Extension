@@ -399,74 +399,58 @@ codeunit 92150 "Run on Test Functions ALTT FLX"
 
     local procedure CreateOneDisabledTestCodeunitWithDisabledTestFunctionsFiveSuccessful(): Integer
     begin
-        with LibraryTestFunctions do begin
-            CreateTestCodeunit(TestSuiteName, GetNextCodeunitID(), IsDisabled());
-            CreateTestFunctions(TestSuiteName, GetCurrentCodeunitID(), IsDisabled(), 5, 0);
-            exit(GetCurrentCodeunitID())
-        end;
+        LibraryTestFunctions.CreateTestCodeunit(TestSuiteName, LibraryTestFunctions.GetNextCodeunitID(), IsDisabled());
+        LibraryTestFunctions.CreateTestFunctions(TestSuiteName, LibraryTestFunctions.GetCurrentCodeunitID(), IsDisabled(), 5, 0);
+        exit(LibraryTestFunctions.GetCurrentCodeunitID())
     end;
 
     local procedure CreateOneDisabledTestCodeunitWithDisabledTestFunctionsTwoSuccessfulAndTwoFailed(): Integer
     begin
-        with LibraryTestFunctions do begin
-            CreateTestCodeunit(TestSuiteName, GetNextCodeunitID(), IsDisabled());
-            CreateTestFunctions(TestSuiteName, GetCurrentCodeunitID(), IsDisabled(), 2, 2);
-            exit(GetCurrentCodeunitID())
-        end;
+        LibraryTestFunctions.CreateTestCodeunit(TestSuiteName, LibraryTestFunctions.GetNextCodeunitID(), IsDisabled());
+        LibraryTestFunctions.CreateTestFunctions(TestSuiteName, LibraryTestFunctions.GetCurrentCodeunitID(), IsDisabled(), 2, 2);
+        exit(LibraryTestFunctions.GetCurrentCodeunitID())
     end;
 
     local procedure CreateOneDisabledTestCodeunitWithFiveDisabledTestFunctions(): Integer
     begin
-        with LibraryTestFunctions do begin
-            CreateTestCodeunit(TestSuiteName, GetNextCodeunitID(), IsDisabled());
-            CreateTestFunctions(TestSuiteName, GetCurrentCodeunitID(), IsDisabled(), 5, 0);
-            exit(GetCurrentCodeunitID())
-        end;
+        LibraryTestFunctions.CreateTestCodeunit(TestSuiteName, LibraryTestFunctions.GetNextCodeunitID(), IsDisabled());
+        LibraryTestFunctions.CreateTestFunctions(TestSuiteName, LibraryTestFunctions.GetCurrentCodeunitID(), IsDisabled(), 5, 0);
+        exit(LibraryTestFunctions.GetCurrentCodeunitID())
     end;
 
     local procedure CreateOneDisabledTestCodeunitWithThreeDisabledTestFunctions(): Integer
     begin
-        with LibraryTestFunctions do begin
-            CreateTestCodeunit(TestSuiteName, GetNextCodeunitID(), IsDisabled());
-            CreateTestFunctions(TestSuiteName, GetCurrentCodeunitID(), IsDisabled(), 3, 0);
-            exit(GetCurrentCodeunitID())
-        end;
+        LibraryTestFunctions.CreateTestCodeunit(TestSuiteName, LibraryTestFunctions.GetNextCodeunitID(), IsDisabled());
+        LibraryTestFunctions.CreateTestFunctions(TestSuiteName, LibraryTestFunctions.GetCurrentCodeunitID(), IsDisabled(), 3, 0);
+        exit(LibraryTestFunctions.GetCurrentCodeunitID())
     end;
 
     local procedure CreateOneEnabledTestCodeunitWithEnabledTestFunctionsFiveSuccessful(): Integer
     begin
-        with LibraryTestFunctions do begin
-            CreateTestCodeunit(TestSuiteName, GetNextCodeunitID(), IsEnabled());
-            CreateTestFunctions(TestSuiteName, GetCurrentCodeunitID(), IsEnabled(), 5, 0);
-            exit(GetCurrentCodeunitID())
-        end;
+        LibraryTestFunctions.CreateTestCodeunit(TestSuiteName, LibraryTestFunctions.GetNextCodeunitID(), IsEnabled());
+        LibraryTestFunctions.CreateTestFunctions(TestSuiteName, LibraryTestFunctions.GetCurrentCodeunitID(), IsEnabled(), 5, 0);
+        exit(LibraryTestFunctions.GetCurrentCodeunitID())
     end;
 
     local procedure CreateOneEnabledTestCodeunitWithEnabledTestFunctionsTwoSuccessfulAndTwoFailed(): Integer
     begin
-        with LibraryTestFunctions do begin
-            CreateTestCodeunit(TestSuiteName, GetNextCodeunitID(), IsEnabled());
-            CreateTestFunctions(TestSuiteName, GetCurrentCodeunitID(), IsEnabled(), 2, 2);
-            exit(GetCurrentCodeunitID())
-        end;
+        LibraryTestFunctions.CreateTestCodeunit(TestSuiteName, LibraryTestFunctions.GetNextCodeunitID(), IsEnabled());
+        LibraryTestFunctions.CreateTestFunctions(TestSuiteName, LibraryTestFunctions.GetCurrentCodeunitID(), IsEnabled(), 2, 2);
+        exit(LibraryTestFunctions.GetCurrentCodeunitID())
     end;
 
     local procedure CreateOneEnabledTestCodeunitWithFiveEnabledTestFunctions(): Integer
     begin
-        with LibraryTestFunctions do begin
-            CreateTestCodeunit(TestSuiteName, GetNextCodeunitID(), IsEnabled());
-            CreateTestFunctions(TestSuiteName, GetCurrentCodeunitID(), IsEnabled(), 5, 0);
-            exit(GetCurrentCodeunitID())
-        end;
+        LibraryTestFunctions.CreateTestCodeunit(TestSuiteName, LibraryTestFunctions.GetNextCodeunitID(), IsEnabled());
+        LibraryTestFunctions.CreateTestFunctions(TestSuiteName, LibraryTestFunctions.GetCurrentCodeunitID(), IsEnabled(), 5, 0);
+        exit(LibraryTestFunctions.GetCurrentCodeunitID())
     end;
 
     local procedure CreateOneEnabledTestCodeunitWithThreeEnabledTestFunctions(): Integer
     begin
-        with LibraryTestFunctions do begin
-            CreateTestCodeunit(TestSuiteName, GetNextCodeunitID(), IsEnabled());
-            CreateTestFunctions(TestSuiteName, GetCurrentCodeunitID(), IsEnabled(), 3, 0);
-            exit(GetCurrentCodeunitID());
-        end;
+        LibraryTestFunctions.CreateTestCodeunit(TestSuiteName, LibraryTestFunctions.GetNextCodeunitID(), IsEnabled());
+        LibraryTestFunctions.CreateTestFunctions(TestSuiteName, LibraryTestFunctions.GetCurrentCodeunitID(), IsEnabled(), 3, 0);
+        exit(LibraryTestFunctions.GetCurrentCodeunitID());
     end;
 
     local procedure PerformSelectOnAll(CodeunitID: Integer)
@@ -525,15 +509,13 @@ codeunit 92150 "Run on Test Functions ALTT FLX"
         NoOfEnabledLinesInTestSuite: Integer;
         NoOfFailedLinesInTestSuite: Integer;
     begin
-        with TestMethodLine do begin
-            SetRange("Test Suite", TestSuiteName);
-            SetRange(Run, true);
-            NoOfEnabledLinesInTestSuite := Count();
-            SetRange(Run);
-            SetRange(Result, Result::Failure);
-            NoOfFailedLinesInTestSuite := Count();
-            Assert.AreEqual(NoOfFailedLinesInTestSuite, NoOfEnabledLinesInTestSuite, 'NoOfFailedLines <> NoOfEnabledLines');
-        end;
+        TestMethodLine.SetRange("Test Suite", TestSuiteName);
+        TestMethodLine.SetRange(Run, true);
+        NoOfEnabledLinesInTestSuite := TestMethodLine.Count();
+        TestMethodLine.SetRange(Run);
+        TestMethodLine.SetRange(Result, TestMethodLine.Result::Failure);
+        NoOfFailedLinesInTestSuite := TestMethodLine.Count();
+        Assert.AreEqual(NoOfFailedLinesInTestSuite, NoOfEnabledLinesInTestSuite, 'NoOfFailedLines <> NoOfEnabledLines');
     end;
 
     local procedure VerifyRunIsSetOnlyOnNonFailedTestCodeunitsAndFunctions()
@@ -542,15 +524,13 @@ codeunit 92150 "Run on Test Functions ALTT FLX"
         NoOfEnabledLinesInTestSuite: Integer;
         NoOfNonFailedLinesInTestSuite: Integer;
     begin
-        with TestMethodLine do begin
-            SetRange("Test Suite", TestSuiteName);
-            SetRange(Run, true);
-            NoOfEnabledLinesInTestSuite := Count();
-            SetRange(Run);
-            SetFilter(Result, '<>%1', Result::Failure);
-            NoOfNonFailedLinesInTestSuite := Count();
-            Assert.AreEqual(NoOfNonFailedLinesInTestSuite, NoOfEnabledLinesInTestSuite, 'NoOfNonFailedLines <> NoOfEnabledLines');
-        end;
+        TestMethodLine.SetRange("Test Suite", TestSuiteName);
+        TestMethodLine.SetRange(Run, true);
+        NoOfEnabledLinesInTestSuite := TestMethodLine.Count();
+        TestMethodLine.SetRange(Run);
+        TestMethodLine.SetFilter(Result, '<>%1', TestMethodLine.Result::Failure);
+        NoOfNonFailedLinesInTestSuite := TestMethodLine.Count();
+        Assert.AreEqual(NoOfNonFailedLinesInTestSuite, NoOfEnabledLinesInTestSuite, 'NoOfNonFailedLines <> NoOfEnabledLines');
     end;
 
     local procedure VerifyRunIsNotSetOnlyOnFailedFunctionsOfSecondTestCodeunit(CodeunitID: Integer)
@@ -559,17 +539,15 @@ codeunit 92150 "Run on Test Functions ALTT FLX"
         NoOfDisabledLinesInTestSuite: Integer;
         NoOfFailedLinesInTestCodeunit: Integer;
     begin
-        with TestMethodLine do begin
-            SetRange("Test Suite", TestSuiteName);
-            SetRange(Run, false);
-            NoOfDisabledLinesInTestSuite := Count();
-            SetRange(Run);
-            SetRange("Test Codeunit", CodeunitID);
-            SetRange(Result, Result::Failure);
-            SetRange("Line Type", "Line Type"::Function);
-            NoOfFailedLinesInTestCodeunit := Count();
-            Assert.AreEqual(NoOfFailedLinesInTestCodeunit, NoOfDisabledLinesInTestSuite, 'NoOfFailedLines <> NoOfDisabledLines');
-        end;
+        TestMethodLine.SetRange("Test Suite", TestSuiteName);
+        TestMethodLine.SetRange(Run, false);
+        NoOfDisabledLinesInTestSuite := TestMethodLine.Count();
+        TestMethodLine.SetRange(Run);
+        TestMethodLine.SetRange("Test Codeunit", CodeunitID);
+        TestMethodLine.SetRange(Result, TestMethodLine.Result::Failure);
+        TestMethodLine.SetRange("Line Type", TestMethodLine."Line Type"::Function);
+        NoOfFailedLinesInTestCodeunit := TestMethodLine.Count();
+        Assert.AreEqual(NoOfFailedLinesInTestCodeunit, NoOfDisabledLinesInTestSuite, 'NoOfFailedLines <> NoOfDisabledLines');
     end;
 
     local procedure VerifyRunIsNotSetOnlyOnNonFailedFunctionsOfSecondTestCodeunit(CodeunitID: Integer)
@@ -578,16 +556,14 @@ codeunit 92150 "Run on Test Functions ALTT FLX"
         NoOfDisabledLinesInTestSuite: Integer;
         NoOfNonFailedLinesInTestCodeunit: Integer;
     begin
-        with TestMethodLine do begin
-            SetRange("Test Suite", TestSuiteName);
-            SetRange(Run, false);
-            NoOfDisabledLinesInTestSuite := Count();
-            SetRange(Run);
-            SetRange("Test Codeunit", CodeunitID);
-            SetFilter(Result, '<>%1', Result::Failure);
-            NoOfNonFailedLinesInTestCodeunit := Count();
-            Assert.AreEqual(NoOfNonFailedLinesInTestCodeunit, NoOfDisabledLinesInTestSuite, 'NoOfNonFailedLines <> NoOfDisabledLines');
-        end;
+        TestMethodLine.SetRange("Test Suite", TestSuiteName);
+        TestMethodLine.SetRange(Run, false);
+        NoOfDisabledLinesInTestSuite := TestMethodLine.Count();
+        TestMethodLine.SetRange(Run);
+        TestMethodLine.SetRange("Test Codeunit", CodeunitID);
+        TestMethodLine.SetFilter(Result, '<>%1', TestMethodLine.Result::Failure);
+        NoOfNonFailedLinesInTestCodeunit := TestMethodLine.Count();
+        Assert.AreEqual(NoOfNonFailedLinesInTestCodeunit, NoOfDisabledLinesInTestSuite, 'NoOfNonFailedLines <> NoOfDisabledLines');
     end;
 
     local procedure VerifyRunIsNotSetOnSecondTestCodeunitAndItsFunctions(CodeunitID: Integer)
@@ -596,15 +572,13 @@ codeunit 92150 "Run on Test Functions ALTT FLX"
         NoOfDisabledLinesInTestSuite: Integer;
         NoOfLinesInTestCodeunit: Integer;
     begin
-        with TestMethodLine do begin
-            SetRange("Test Suite", TestSuiteName);
-            SetRange(Run, false);
-            NoOfDisabledLinesInTestSuite := Count();
-            SetRange(Run);
-            SetRange("Test Codeunit", CodeunitID);
-            NoOfLinesInTestCodeunit := Count();
-            Assert.AreEqual(NoOfLinesInTestCodeunit, NoOfDisabledLinesInTestSuite, 'NoOfLinesInTestCodeunit <> NoOfDisabledLines');
-        end;
+        TestMethodLine.SetRange("Test Suite", TestSuiteName);
+        TestMethodLine.SetRange(Run, false);
+        NoOfDisabledLinesInTestSuite := TestMethodLine.Count();
+        TestMethodLine.SetRange(Run);
+        TestMethodLine.SetRange("Test Codeunit", CodeunitID);
+        NoOfLinesInTestCodeunit := TestMethodLine.Count();
+        Assert.AreEqual(NoOfLinesInTestCodeunit, NoOfDisabledLinesInTestSuite, 'NoOfLinesInTestCodeunit <> NoOfDisabledLines');
     end;
 
     local procedure VerifyRunIsSetOnlyOnSecondTestCodeunitAndItsFailedFunctions(CodeunitID: Integer)
@@ -613,16 +587,14 @@ codeunit 92150 "Run on Test Functions ALTT FLX"
         NoOfEnabledLinesInTestSuite: Integer;
         NoOfFailedLinesInTestCodeunit: Integer;
     begin
-        with TestMethodLine do begin
-            SetRange("Test Suite", TestSuiteName);
-            SetRange(Run, true);
-            NoOfEnabledLinesInTestSuite := Count();
-            SetRange(Run);
-            SetRange("Test Codeunit", CodeunitID);
-            SetRange(Result, Result::Failure);
-            NoOfFailedLinesInTestCodeunit := Count();
-            Assert.AreEqual(NoOfFailedLinesInTestCodeunit, NoOfEnabledLinesInTestSuite, 'NoOfFailedLines <> NoOfEnabledLines');
-        end;
+        TestMethodLine.SetRange("Test Suite", TestSuiteName);
+        TestMethodLine.SetRange(Run, true);
+        NoOfEnabledLinesInTestSuite := TestMethodLine.Count();
+        TestMethodLine.SetRange(Run);
+        TestMethodLine.SetRange("Test Codeunit", CodeunitID);
+        TestMethodLine.SetRange(Result, TestMethodLine.Result::Failure);
+        NoOfFailedLinesInTestCodeunit := TestMethodLine.Count();
+        Assert.AreEqual(NoOfFailedLinesInTestCodeunit, NoOfEnabledLinesInTestSuite, 'NoOfFailedLines <> NoOfEnabledLines');
     end;
 
     local procedure VerifyRunIsSetOnlyOnSecondTestCodeunitAndItsFunctions(CodeunitID: Integer)
@@ -631,15 +603,13 @@ codeunit 92150 "Run on Test Functions ALTT FLX"
         NoOfEnabledLinesInTestCodeunit: Integer;
         NoOfEnabledLinesInTestSuite: Integer;
     begin
-        with TestMethodLine do begin
-            SetRange("Test Suite", TestSuiteName);
-            SetRange(Run, true);
-            NoOfEnabledLinesInTestSuite := Count();
-            SetRange(Run);
-            SetRange("Test Codeunit", CodeunitID);
-            NoOfEnabledLinesInTestCodeunit := Count();
-            Assert.AreEqual(NoOfEnabledLinesInTestCodeunit, NoOfEnabledLinesInTestSuite, 'NoOfEnabledLinesInTestCodeunit <> NoOfEnabledLines');
-        end;
+        TestMethodLine.SetRange("Test Suite", TestSuiteName);
+        TestMethodLine.SetRange(Run, true);
+        NoOfEnabledLinesInTestSuite := TestMethodLine.Count();
+        TestMethodLine.SetRange(Run);
+        TestMethodLine.SetRange("Test Codeunit", CodeunitID);
+        NoOfEnabledLinesInTestCodeunit := TestMethodLine.Count();
+        Assert.AreEqual(NoOfEnabledLinesInTestCodeunit, NoOfEnabledLinesInTestSuite, 'NoOfEnabledLinesInTestCodeunit <> NoOfEnabledLines');
     end;
 
     local procedure VerifyRunIsSetOnlyOnSecondTestCodeunitAndItsNonFailedFunctions(CodeunitID: Integer)
@@ -648,15 +618,13 @@ codeunit 92150 "Run on Test Functions ALTT FLX"
         NoOfEnabledLinesInTestSuite: Integer;
         NoOfNonFailedLinesInTestCodeunit: Integer;
     begin
-        with TestMethodLine do begin
-            SetRange("Test Suite", TestSuiteName);
-            SetRange(Run, true);
-            NoOfEnabledLinesInTestSuite := Count();
-            SetRange(Run);
-            SetRange("Test Codeunit", CodeunitID);
-            SetFilter(Result, '<>%1', Result::Failure);
-            NoOfNonFailedLinesInTestCodeunit := Count();
-            Assert.AreEqual(NoOfNonFailedLinesInTestCodeunit, NoOfEnabledLinesInTestSuite, 'NoOfNonFailedLines <> NoOfEnabledLines');
-        end;
+        TestMethodLine.SetRange("Test Suite", TestSuiteName);
+        TestMethodLine.SetRange(Run, true);
+        NoOfEnabledLinesInTestSuite := TestMethodLine.Count();
+        TestMethodLine.SetRange(Run);
+        TestMethodLine.SetRange("Test Codeunit", CodeunitID);
+        TestMethodLine.SetFilter(Result, '<>%1', TestMethodLine.Result::Failure);
+        NoOfNonFailedLinesInTestCodeunit := TestMethodLine.Count();
+        Assert.AreEqual(NoOfNonFailedLinesInTestCodeunit, NoOfEnabledLinesInTestSuite, 'NoOfNonFailedLines <> NoOfEnabledLines');
     end;
 }
