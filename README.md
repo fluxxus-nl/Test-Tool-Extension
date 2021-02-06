@@ -22,3 +22,5 @@ You also might want to read me [blog post](https://dynamicsuser.net/nav/b/vanvug
 With BC16 MS has released a new test tool called _AL Test Tool_, which no longer is part of the application, but resides in it's own extension. The Al Test Tool Extension extends this in the same matter as the CAL Test Tool Extension extends the _CAL Test Tool_.
 
 ![Web Client](https://github.com/fluxxus-nl/Test-Tool-Extension/blob/master/Images/AL%20Test%20Tool%20Extension%20Actions.png)
+
+[Azure DevOps pipelines](https://dev.azure.com/fluxxus-nl/Test-Tool-Extension) have been setup for the AL version of this project.
